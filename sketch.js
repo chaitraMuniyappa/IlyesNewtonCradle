@@ -5,11 +5,12 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Render = Matter.Render;
 const Constraint = Matter.Constraint;
-var bobObject1,bobObject2,bobObject3, bobObject4,bobObject5, roofObject
+
+var bob1,bob2,bob3, bob4,bob5, roofObject
 var rope1,rope2,rope3, rope4,rope5;
 var world;
 
-
+//this is a comment 
 function setup() {
 	createCanvas(800, 600);
 	rectMode(CENTER);
@@ -21,8 +22,8 @@ function setup() {
 	roofObject=new roof(400,250,230,20);
 	bob1 = new bob(320,575,40)
 	bob2 = new bob(360,575,40)
-	bob3 = new bob(400,575,40);
-	bob4 = new bob(440,575,40);
+	bob3 = new bob(400,575,40)
+	bob4 = new bob(440,575,40)
 	bob5 = new bob(480,575,40)
 	
 	
@@ -38,6 +39,7 @@ function setup() {
 }
 
 
+
 function draw() {
   rectMode(CENTER);
   background(230);
@@ -51,15 +53,25 @@ function draw() {
 
   bob1.display();
   bob2.display();
+  
   bob3.display();
   bob4.display();
   bob5.display();
 
-  keyPressed();
+  
+ 
 }
-
-function keyPressed(){
-	if(keyCode ===  UP_ARROW){
-		Matter.Body.applyForce(bobObject1.body, bobObject1.body.position, {x:-50, y:-45})
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+	
+		 Matter.Body.applyForce(bob1.body,bob1.body.position,
+								{x:-50,y:-45});
+	
+		  }
 	}
-}   
+
+
+
+
+
+
